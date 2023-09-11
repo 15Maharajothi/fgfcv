@@ -1,0 +1,32 @@
+
+class Bond {
+    public void displayO() {
+        System.out.println("Bond");
+    }
+}
+
+class ConvertibleBond extends Bond {
+    @Override
+    public void displayO() {
+        System.out.println("ConvertibleBond");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Bond[] bonds = new Bond[6];
+        bonds[0] = new Bond();
+        bonds[1] = new ConvertibleBond();
+        bonds[2] = new Bond();
+        bonds[3] = new ConvertibleBond();
+        bonds[4] = new ConvertibleBond();
+        bonds[5] = new Bond();
+
+        for (Bond bond : bonds) {
+            bond.displayO();
+        }
+    }
+}
+
+
+This 
